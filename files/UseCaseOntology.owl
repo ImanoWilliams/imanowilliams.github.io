@@ -1,0 +1,2539 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#synonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#synonym">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#IsEquivalentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#IsEquivalentTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#address -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#address">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#addressedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#addressedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#addressedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#assetLocatedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#assetLocatedOn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAsset"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirmation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Notification"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#basicGroupHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#basicGroupHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BasicFlowGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#boundedGroudHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#boundedGroudHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BoundedAltFlowGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AltFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#buttonLocatedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#buttonLocatedOn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasButton"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#click -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#click">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Click"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#conflictingRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#conflictingRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#conflictingUseCase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#conflictingUseCase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#connect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#connect">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#connectedBy"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#connectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#connectedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#create -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#create">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Create"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#dependsOnFlowBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#dependsOnFlowBefore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#display -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#display">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Display"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#edit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#edit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Update"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#endsAtWebPage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#endsAtWebPage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PostCondition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SuccessPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#enteredOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#enteredOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#InputOption"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#globalGroupHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#globalGroupHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#GlobalAltFlowGroup"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AltFlow"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExceptionFlow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAbortOrResumeStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAbortOrResumeStep">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BoundedAltFlowGroup"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#GlobalAltFlowGroup"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Abort"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAccessCtrl -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAccessCtrl">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAsset -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAsset">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAuth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAuth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasButton -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasButton">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasBypass -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasBypass">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MultiStepBypass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasCon">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowAfter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#subsequentFlow"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowBefore"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowBefore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#dependsOnFlowBefore"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasFlowGroup">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasIntegrity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasIntegrity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasLink -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasLink">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#linkLocatedOn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasNonRep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasNonRep">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#affectedBy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Non-Repudiation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasPostCond -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasPostCond">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PostCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasPreCond -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasPreCond">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PreCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasStartRefFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasStartRefFlow">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasStopRefFlow"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BoundedAltFlowGroup"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasStopRefFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasStopRefFlow">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#GlobalAltFlowGroup"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasSupportedRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasSupportedRole">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#support"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasUseCase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasUseCase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SystemUnderDevelopment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasWebPage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasWebPage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isExtentionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isExtentionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isInclusionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isInclusionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isPartOfGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isPartOfGroup">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSimilarTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSimilarTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSpecializationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSpecializationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#linkLocatedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#linkLocatedOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#linkToWebpage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#linkToWebpage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#messageHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#messageHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Text"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#messageLocatedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#messageLocatedOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#NonInputOption"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#nextQualifiedUseCaseInFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#nextQualifiedUseCaseInFlow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#raise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#raise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#retrieve -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#retrieve">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Search"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#save -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#save">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Save"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#send -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#send">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#specificGroupHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#specificGroupHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AltFlow"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExceptionFlow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#startsAtWebPage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#startsAtWebPage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PreCondition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SuccessPage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#subsequentFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#subsequentFlow">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#superiorRoleTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#superiorRoleTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#support -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#support">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#thisUntilHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#thisUntilHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Until"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Do"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#validate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#validate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Validate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#view -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#view">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#View"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasObject"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#accessLvl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#accessLvl">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#actionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#actionType">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>passive</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#assetType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#assetType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>non-sensitive</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>sensitive</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#buttonType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#buttonType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>passive</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasEventNum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasEventNum">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasGoal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasGoal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasInteraction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasInteraction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>multiple</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>single</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasLinkParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasLinkParameter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>both</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>non-sensitive</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>none</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>sensitive</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasPurpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasPurpose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>create</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>delete</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>read</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>update</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasUserInput -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasUserInput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasWebAppLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasWebAppLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>authenticated</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>both</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>unauthenticated</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isFlowConcurrent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isFlowConcurrent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isFlowIfThen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isFlowIfThen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isKeyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isKeyword">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSecurityRelated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSecurityRelated">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSuccessPage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isSuccessPage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isValidationStep -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#isValidationStep">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>existCheck</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>normal</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>typeCheck</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#priority">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>medium</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#rank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#rank">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>medium</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#rulesR20R23 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#rulesR20R23"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#status">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>accepted</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>rejected</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>under review</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#subjectType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#subjectType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>system</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>user</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#typeOfWebApp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#typeOfWebApp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SystemUnderDevelopment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Abort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Abort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Access_Sensitive_Data_Storage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Access_Sensitive_Data_Storage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sensitive_Data"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data_Tampering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Subject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#support"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#System"/>
+        <rdfs:comment>Represents the user that should interact with the system to achieve a goal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AltFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AltFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:comment>Is a sequence of actions other than the main flow that results in a user completing his or her goal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Application_Flow_Bypass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Application_Flow_Bypass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object"/>
+        <rdfs:comment>An intangible valuable resource, such as a password. This resource is worth protecting. We distinguish between text-based and non-text-based assets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Attack_Exploitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Attack_Exploitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Auditing_Logging"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Attacker_Cover_Tracks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Attacker_Cover_Tracks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Attacker_Cover_Tracks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Auditing_Logging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Auditing_Logging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Auditing_Logging">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+        <rdfs:comment>Concerns about the actors are who or what they claim to be to avoid exploits by an impostor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication_Attack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication_Attack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authorization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authorization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BasicFlowGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BasicFlowGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BoundedAltFlowGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BoundedAltFlowGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Brute_Force -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Brute_Force">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Buffer_Overflows -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Buffer_Overflows">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Input_Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+        <rdfs:comment>buttons tell users they can perform a particular action</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#CRSF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#CRSF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cancel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cancel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>Decide that the previous decision or activity will not take place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Checkboxes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Checkboxes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Click -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Click">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Clickjacking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Clickjacking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ClientSide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ClientSide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#System"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ServerSide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+        <rdfs:comment>Ensure the access to data and communications on a “need to know” basis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>a user confirms the changes in the system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirm_Prompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirm_Prompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirmation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+        <rdfs:comment>Informs the user about the successful change made to the system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cookie_Manipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cookie_Manipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Parameter_Tampering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Create -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Create">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter"/>
+        <rdfs:comment>Make a new asset in the system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Credential_Theft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Credential_Theft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cross_site_Scripting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cross_site_Scripting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Input_Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data_Field -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data_Field">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data_Tampering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Data_Tampering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sensitive_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Datum_Validation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Datum_Validation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Delete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Delete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>Wipe out digitally or magnetically recorded information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Deletion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Deletion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Disclosure_of_Confidential_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Disclosure_of_Confidential_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authorization"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Elevation_of_Privilege"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Display -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Display">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#DisplayConfidentiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#DisplayConfidentiality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality"/>
+        <rdfs:comment>Ensure the access to data and communications on a “need to know” basis when display to the user in the browser.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Do -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Do">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Download -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Download">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>Transfer a file or program from a central computer to a smaller computer or to a computer at a remote
+location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#DownloadLink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#DownloadLink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Dropdown_Lists -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Dropdown_Lists">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Elevation_of_Privilege -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Elevation_of_Privilege">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authorization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>Put or introduce into something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Error -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Error">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ErrorPage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ErrorPage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SuccessPage"/>
+        <rdfs:comment>a version of a web page that informs the user about an error.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Error_Msg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Error_Msg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExceptionFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExceptionFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:comment>is any sequence of actions that will cause the user to not to complete or achieve the desired result.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Handling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Handling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExternalSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExternalSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent">
+        <rdfs:comment>This represent a path through the system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Form_Field -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Form_Field">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#GlobalAltFlowGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#GlobalAltFlowGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#HTTP_Header -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#HTTP_Header">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Parameter_Tampering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Helper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Helper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Horiziontal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Horiziontal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Identify -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Identify">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Information_Disclosure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Information_Disclosure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#InputOption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#InputOption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Input_Validation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Input_Validation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#InternalLink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#InternalLink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+        <synonym>{&quot;URL&quot;}</synonym>
+        <rdfs:comment>Allow users to click their way from page to page</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+        <rdfs:comment>It represents the most common path way that the use case plays out successfully and contains the most common sequence of user-system interaction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Messagae_Box -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Messagae_Box">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+        <rdfs:comment>A modal window is a small box containing content or a message that requires you to interact with it before you can close it and return to your flow</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Modification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Modification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MultiStepBypass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MultiStepBypass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Network_Eavesdropping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Network_Eavesdropping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Non-Repudiation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Non-Repudiation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+        <rdfs:comment>Ensure that adequate tamper-proof records are kept to prevent actors from denying that the interactions with the system have taken place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#NonInputOption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#NonInputOption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#NonText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#NonText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Text"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Notification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Notification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+        <rdfs:comment>to inform the user of some event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#OperationalIntegrity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#OperationalIntegrity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+        <rdfs:comment>maintained through concurrency controls as part of
+the integrity service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Parameter_Tampering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Parameter_Tampering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PhysicalIntegrity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PhysicalIntegrity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+        <rdfs:comment>Achieved by the use of checksums, provided by the
+integrity service, and cryptographic techniques, provided by the confidentiality service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PostCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PostCondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PreCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PreCondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Prerequisite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Prerequisite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Query_String -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Query_String">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Parameter_Tampering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Race_Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Race_Condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Radio_Buttons -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Radio_Buttons">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SQL_Injection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SQL_Injection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Input_Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Save -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Save">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Search -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Search">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter"/>
+        <synonym>{&quot;consult&quot;, &quot;look up&quot;, &quot;refer&quot;, &quot;retrieve&quot;}</synonym>
+        <rdfs:comment>Look for an asset in the system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns">
+        <rdfs:comment>Matters of interest related to security exploits that may affect use case flows based on the action, GUI, and asset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement">
+        <rdfs:comment>Conditions that must be satisfied to address a security concern.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SemanticIntegrity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SemanticIntegrity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+        <rdfs:comment>relies heavily on the access control service, because it requires data to be changed only according to certain business rules</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sensitive_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sensitive_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Separation_Of_Duties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Separation_Of_Duties">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ServerSide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ServerSide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Fixation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Fixation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Hijacking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Hijacking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Replay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Replay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sessions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sessions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UserCredentials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#StorageConfidentiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#StorageConfidentiality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality"/>
+        <rdfs:comment>Ensure the access to data and communications on a “need to know” basis when stored in the web application.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Subject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SuccessPage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SuccessPage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        <rdfs:comment>a version of the web page that displays the user&apos;s successful request.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#System">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SystemUnderDevelopment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SystemUnderDevelopment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Temporal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Temporal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Text -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Text">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Text_Field -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Text_Field">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#TransmissionConfidentiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#TransmissionConfidentiality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality"/>
+        <rdfs:comment>Ensure the access to data and communications on a “need to know” basis transmitted to the server via the client.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Until -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Until">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Update -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Update">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter"/>
+        <synonym>{&quot;change&quot;, &quot;edit&quot;}</synonym>
+        <rdfs:comment>Make partial or minor changes to an asset</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Upload -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Upload">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>Transfer (data) to a larger computer system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#hasSupportedRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents the functionality of the web application to achieve some business goal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UserCredentials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UserCredentials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UserIdentity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UserIdentity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Identify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Validate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Validate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+        <rdfs:comment>Check or prove the validity or accuracy of (something)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Verify -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Verify">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter"/>
+        <rdfs:comment>a use checks that the asset enter is the intended one.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Vertical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Vertical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Warning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Warning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+        <rdfs:comment>A document which can be displayed in a web browser</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object"/>
+        <rdfs:comment>The components on the web application that actors interact with in a scenario.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Abort"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cancel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Click"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confirm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Delete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Display"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Do"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Download"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Enter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Save"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Until"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Upload"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Validate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#View"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AccessControl"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Confidentiality"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Identify"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Integrity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MultiStepBypass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Non-Repudiation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#AltFlow"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ExceptionFlow"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#MainFlow"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Application_Flow_Bypass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Auditing_Logging"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authentication_Attack"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Authorization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Management"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Input_Validation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Parameter_Tampering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Race_Condition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Sensitive_Data"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Management"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Asset"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Message"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebUIComponent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BasicFlowGroup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#BoundedAltFlowGroup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#GlobalAltFlowGroup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SpecificAltFlowGroup"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Brute_Force"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Credential_Theft"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Network_Eavesdropping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Buffer_Overflows"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Cross_site_Scripting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SQL_Injection"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Business"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Horiziontal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Vertical"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Button"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Link"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#ModalBox"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#WebPage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#CRSF"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Clickjacking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Fixation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Hijacking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Session_Replay"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Create"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Search"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Update"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Verify"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Datum_Validation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Deletion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Exception_Handling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Modification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#OperationalIntegrity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PhysicalIntegrity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Prerequisite"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SemanticIntegrity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Separation_Of_Duties"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Temporal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#DisplayConfidentiality"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#StorageConfidentiality"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#TransmissionConfidentiality"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowGroup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#FlowOfEvent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Action"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Flow_Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PostCondition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#PreCondition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityConcerns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SecurityRequirement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Subject"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#SystemUnderDevelopment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#UseCase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/imano/ontologies/2018/8/untitled-ontology-2#Web_Attack"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
