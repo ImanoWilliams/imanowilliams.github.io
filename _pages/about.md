@@ -8,5 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-I am a fourth year PhD student in the Department of Computer Science at North Carolina A&T State University. I am graduate researcher in the Information Assurance Lab directed by Professor
-Dr. Xiaohong Yuan. My research focuses on building tools for automated software secure engineering.
+I am a fourth year PhD student in the Department of Computer Science at North Carolina A&T State University. I am a graduate researcher in the Information Assurance Lab directed by Professor
+Xiaohong Yuan. My research focuses on building tools for automated software secure engineering by utilizing natural langauage processing, recommender system, and application ontology.
