@@ -16,7 +16,7 @@ Currently, I am a graduate researcher in the Information Assurance Lab directed 
 
 ### <i class="fa fa-fw fa-book-reader" aria-hidden="true"> </i> Research Interest
 My main goal is to improve secure software engineering by focusing on:
-  * **Automated Software Engineering: ** Automated Vulnerability Localization in Software Artifacts
-  * **Natural Language Processing in Software Engineering: ** Extraction of Domain Features in Software Artifacts
-  * **Ontology in Software Engineering: ** Model Based Consistency Checking, and Model Based Software development
-  * **User Studies in Automated Software Engineering Tools: ** Situational Characteristics, Personal Characteristics, User Experience, User Interaction
+  * **Automated Software Engineering:** Automated Vulnerability Localization in Software Artifacts
+  * **Natural Language Processing in Software Engineering:** Extraction of Domain Features in Software Artifacts
+  * **Ontology in Software Engineering:** Model Based Consistency Checking, and Model Based Software development
+  * **User Studies in Automated Software Engineering Tools:** Situational Characteristics, Personal Characteristics, User Experience, User Interaction
