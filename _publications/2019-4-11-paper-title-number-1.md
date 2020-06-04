@@ -6,5 +6,5 @@ excerpt: 'Recommender systems have been used to improve software requirements en
 date: 2019-4-11
 venue: 'IEEE SoutheastCon'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/9020667'
-citation: 'I. Williams and X. Yuan, &quot;Recommender Systems for Software Requirements Engineering: Current Research & Challenges,&quot; <i>2019 SoutheastCon</i>, Huntsville, AL, USA, 2019, pp. 1-6'
+citation: '**I. Williams** and X. Yuan, &quot;Recommender Systems for Software Requirements Engineering: Current Research & Challenges,&quot; <i>2019 SoutheastCon</i>, Huntsville, AL, USA, 2019, pp. 1-6'
 ---
