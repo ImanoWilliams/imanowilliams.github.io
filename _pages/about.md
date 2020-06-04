@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 ### <i class="fa fa-fw fa-user" aria-hidden="true"> </i> About me
-I am a fourth year PhD Candidate in the [Department of Computer Science](https://www.ncat.edu/coe/departments/cs/index.php) at [North Carolina A&T State University](https://www.ncat.edu/). I obtained my MS in Computer Science at North Carolina A&T State University in 2015 and my B.Sc. in Computer Science & Electronics at The University of The West Indies at [Mona Campus](https://www.mona.uwi.edu/) in 2012.
+I am a PhD Candidate in the [Department of Computer Science](https://www.ncat.edu/coe/departments/cs/index.php) at [North Carolina A&T State University](https://www.ncat.edu/). I obtained my MS in Computer Science at North Carolina A&T State University in 2015 and my B.Sc. in Computer Science & Electronics at The University of The West Indies at [Mona Campus](https://www.mona.uwi.edu/) in 2012.
 
 **I will complete my Ph.D. in Computer Science in Fall 2020.**
 
